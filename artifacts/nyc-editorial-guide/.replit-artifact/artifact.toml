@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/nyc-editorial-guide/"
+title = "New York City Field Notes"
+description = "A standalone, editorial-style pocket guide to New York City with local food, quick facts, the state bird, and an in-memory visitor notes list."
+version = "1.0.0"
+id = "artifacts/nyc-editorial-guide"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/nyc-editorial-guide/" ]
+localPort = 23713
+
+[services.development]
+run = "pnpm --filter @workspace/nyc-editorial-guide run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/nyc-editorial-guide", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/nyc-editorial-guide/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23713"
+BASE_PATH = "/nyc-editorial-guide/"

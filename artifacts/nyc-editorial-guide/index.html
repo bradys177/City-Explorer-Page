@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#090a08">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <title>New York City Field Notes — A pocket guide</title>
+    <meta name="description" content="A pocket guide to New York City: a few useful facts, a proper pizza slice, and small things worth noticing.">
+    <meta property="og:title" content="New York City Field Notes">
+    <meta property="og:description" content="Five boroughs. A little loud, a lot lovely. Start anywhere.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./script.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#site-content">Skip to the guide</a>
+    <!-- The header keeps the guide name and its visit, search, and menu controls. -->
+    <header class="site-header shell" id="top">
+      <a class="brand" href="#top" aria-label="New York Field Notes, home">
+        <span class="brand-stamp" aria-hidden="true">NY</span>
+        <span>Field notes <i>/</i> New York City</span>
+      </a>
+      <div class="header-actions">
+        <a class="visit-link" href="#city-facts">Plan your visit <span aria-hidden="true">↘</span></a>
+        <button class="icon-button search-toggle" type="button" aria-label="Search this guide" aria-expanded="false" aria-controls="site-search" data-testid="button-search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.5"></circle><path d="m15.6 15.6 5 5"></path></svg>
+        </button>
+        <button class="icon-button menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu" data-testid="button-menu">
+          <span></span><span></span>
+        </button>
+      </div>
+      <form class="popover search-panel" id="site-search" role="search" hidden>
+        <label for="search-input">Search this guide</label>
+        <div class="search-row">
+          <input id="search-input" type="search" placeholder="Try pizza or bluebird" autocomplete="off">
+          <button type="submit">Find <span aria-hidden="true">↗</span></button>
+        </div>
+        <p class="search-message" role="status" aria-live="polite"></p>
+      </form>
+      <nav class="popover menu-panel" id="site-menu" aria-label="On this page" hidden>
+        <a href="#city-facts">Quick facts <span>01</span></a>
+        <a href="#local-food">New York pizza <span>02</span></a>
+        <a href="#state-bird">State bird <span>03</span></a>
+        <a href="#city-notes">Things I like <span>04</span></a>
+      </nav>
+    </header>
+
+    <main id="site-content">
+      <!-- Editorial cover and featured pizza photograph. -->
+      <section class="hero shell search-section" id="cover" aria-label="The New York City cover story" data-search-section>
+        <div class="hero-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-rule"></span>A pocket guide for first wanderings</p>
+            <h1 class="cover-title"><span>New York</span><span>in your</span><em>pocket.</em></h1>
+          </div>
+          <p class="hero-note"><strong>Five boroughs.</strong>A little loud, a lot lovely. Start anywhere, look up often, and leave room for one more slice.</p>
+        </div>
+
+        <figure class="cover-photo" id="local-food">
+          <img src="./images/nyc-pizza.png" alt="A generous New York cheese slice lifted from a pie at a neighborhood counter, with the city street beyond." fetchpriority="high">
+          <figcaption>
+            <span><span class="photo-kicker">A very good place to start</span><span class="photo-title">New York pizza. The fold.</span></span>
+            <span class="coordinates">40° 42′ 46.8″ N<br>74° 00′ 21.6″ W</span>
+          </figcaption>
+        </figure>
+        <div class="hero-footer">
+          <span>New York City · Field notes no. 01</span>
+          <a href="#city-facts">Get your bearings <span aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+
+      <!-- Three quick facts and the city's current mayor. -->
+      <section class="facts shell search-section" id="city-facts" aria-label="Quick facts about New York City" data-search-section>
+        <div class="section-heading">
+          <p class="eyebrow">Quick facts <span>01 / 03</span></p>
+          <h2>A few things<br>to know.</h2>
+        </div>
+        <div class="facts-content">
+          <p class="intro">Big place. Big heart. Here’s the short version before you hit the sidewalk.</p>
+          <ul class="fact-list">
+            <li><span class="fact-letter" aria-hidden="true">A</span><span>We call it <strong>The Big Apple.</strong></span></li>
+            <li><span class="fact-letter" aria-hidden="true">B</span><span>About <strong>8.6 million</strong> people call New York City home, based on the July 2025 estimate.</span></li>
+            <li><span class="fact-letter" aria-hidden="true">C</span><span>New York State was admitted to the Union in <strong>1788.</strong></span></li>
+          </ul>
+          <p class="mayor"><span class="city-seal" aria-hidden="true">NYC</span><span>City Hall, these days: <strong>Mayor Zohran Mamdani</strong></span></p>
+        </div>
+      </section>
+
+      <!-- A little more about New York City's best-known food. -->
+      <section class="food shell search-section" aria-label="New York City's best-known food" data-search-section>
+        <div class="food-copy">
+          <p class="eyebrow">A local favorite <span>02 / 03</span></p>
+          <h2>One slice,<br><em>then another.</em></h2>
+          <p>NYC pizza comes by the slice: thin, wide, and sturdy enough to fold in half for the sidewalk. Go for a classic cheese, grab extra napkins, and don’t overthink the best slice. The one in your hand is doing just fine.</p>
+          <span class="food-note">Best enjoyed standing at the counter</span>
+        </div>
+        <figure class="food-art">
+          <img src="./images/nyc-pizza.png" alt="A close view of a wide, thin New York cheese slice being lifted, its golden crust and melted cheese ready for a sidewalk fold." loading="lazy">
+          <figcaption class="photo-caption">Counter service, downtown</figcaption>
+        </figure>
+      </section>
+
+      <!-- The bird image is a button so visitors can trigger its animation. -->
+      <section class="bird-section search-section" id="state-bird" aria-label="New York State bird" data-search-section>
+        <div class="bird-inner">
+          <div class="bird-copy">
+            <p class="eyebrow">Look up. Then look closer <span>A small surprise</span></p>
+            <h2>The city has<br>a <em>softer side.</em></h2>
+            <p>Between the avenues, there are leafy paths and little flashes of blue. New York’s state bird is the eastern bluebird. Tap it for a tiny takeoff.</p>
+            <span class="bird-hint">A small hello from the park <span aria-hidden="true">→</span></span>
+          </div>
+          <button class="bird-button" type="button" aria-label="Make the eastern bluebird take off" data-testid="button-bluebird">
+            <img class="bird" src="./images/eastern-bluebird.png" alt="An eastern bluebird perched in profile on a branch, its blue wings and warm russet breast visible against green foliage." loading="lazy">
+          </button>
+        </div>
+      </section>
+
+      <!-- Visitor notes stay in the page's memory and disappear when it closes. -->
+      <section class="notes shell search-section" id="city-notes" aria-label="Things I like about New York City" data-search-section>
+        <div class="notes-intro">
+          <p class="eyebrow">Make it yours <span>03 / 03</span></p>
+          <h2>Things I<br><em>like.</em></h2>
+          <p>Save the little discoveries from your day. This list lives only while this page is open.</p>
+        </div>
+        <div class="notes-card">
+          <div class="notes-top"><span>Your city notes</span><span>NYC · Today</span></div>
+          <form id="note-form">
+            <label for="note-input">Something you liked</label>
+            <div class="input-row">
+              <input id="note-input" name="like" type="text" maxlength="120" placeholder="A stoop, a song, a really good bagel…" autocomplete="off">
+              <button type="submit">Add <span aria-hidden="true">+</span></button>
+            </div>
+            <p class="form-hint">Just for this visit. No account, no fuss.</p>
+          </form>
+          <ul class="note-list" id="note-list" aria-live="polite" aria-relevant="additions removals"></ul>
+          <p class="empty-note" id="empty-note">Your page, your pace. Add the first thing you love.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer shell">
+      <span class="brand-stamp" aria-hidden="true">NY</span>
+      <p>Take the long way home.</p>
+      <a href="#top">Back to the beginning <span aria-hidden="true">↑</span></a>
+    </footer>
+  </body>
+</html>
