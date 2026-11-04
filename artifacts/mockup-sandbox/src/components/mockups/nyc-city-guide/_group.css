@@ -1,0 +1,13 @@
+.nyc-current-preview {
+  min-height: 100vh;
+  width: 100%;
+  background: #f5eddb;
+}
+
+.nyc-current-preview iframe {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+  height: 100vh;
+  border: 0;
+}
